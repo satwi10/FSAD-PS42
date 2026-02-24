@@ -1,0 +1,343 @@
+:root {
+  --primary: #002147;
+  --secondary: #003a75;
+  --accent: #b3a369;
+  --bg: #f4f6f9;
+  --border: #e5e7eb;
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: #1f2933;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  height: 70px;
+  padding: 0 6%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--primary);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uni-logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.uni-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.portal-badge {
+  font-size: 0.75rem;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.btn-nav {
+  border: 2px solid var(--primary);
+  background: transparent;
+  padding: 7px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-nav:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================= HERO ================= */
+.landing-hero {
+  background: linear-gradient(135deg, #00152e, #002147, #003a75);
+  color: white;
+  text-align: center;
+  padding: 110px 20px 120px;
+}
+
+.landing-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.landing-hero p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.login-choices {
+  margin-top: 30px;
+}
+
+.login-choices button {
+  margin: 8px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: white;
+  color: var(--primary);
+  transition: 0.2s;
+}
+
+.login-choices button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= INFO SECTION ================= */
+.info-section {
+  padding: 60px 6%;
+  background: #f5f7fa;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.info-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 6%;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+
+/* ================= TABLE ================= */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.data-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ================= BADGES ================= */
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.success { background: #dcfce7; color: #166534; }
+.danger { background: #fee2e2; color: #991b1b; }
+.warning { background: #fef3c7; color: #92400e; }
+
+/* ================= LOGIN ================= */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 36px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--primary);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FORM CONTROLS */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.15);
+}
+
+.error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ================= ERP LAYOUT ================= */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 230px;
+  min-width: 230px;
+  background: var(--primary);
+  color: white;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.nav-item.active {
+  background: rgba(255,255,255,0.18);
+  font-weight: 600;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+  background: var(--bg);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+.btn-auth {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-auth:hover {
+  background: var(--secondary);
+}
+
+.btn-auth:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.info-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
